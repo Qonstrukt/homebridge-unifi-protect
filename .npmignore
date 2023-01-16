@@ -6,4 +6,5 @@
 !README.md
 !config.schema.json
 !dist/**
+!src/**
 !package.json
