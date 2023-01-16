@@ -519,6 +519,7 @@ export class ProtectCamera extends ProtectAccessory {
     //   1920x1080@30 (1080p).
     //   1280x720@30 (720p).
     //   320x240@15 (Apple Watch).
+    /*
     for(const entry of [ [3840, 2160, 30], [1920, 1080, 30], [1280, 720, 30], [320, 240, 15] ] ) {
 
       // We already have this resolution in our list.
@@ -539,6 +540,7 @@ export class ProtectCamera extends ProtectAccessory {
       // Since we added resolutions to the list, resort resolutions, from high to low.
       rtspEntries.sort(this.sortByResolutions.bind(this));
     }
+    */
 
     // Publish our updated list of supported resolutions and their URLs.
     this.rtspEntries = rtspEntries;
