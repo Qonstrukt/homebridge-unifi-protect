@@ -363,7 +363,7 @@ class ProtectCamera extends protect_accessory_1.ProtectAccessory {
                 resolution: [channel.width, channel.height, channel.fps], url: cameraUrl + channel.rtspAlias + "?enableSrtp" });
         }
         // Inform users about our which RTSP streams we found.
-        for (const entry of this.rtspEntries) {
+        for (const entry of rtspEntries) {
             this.log.info("%s: Found resolution: %s.", this.name(), this.getResolution(entry.resolution));
         }
         // Sort the list of resolutions, from high to low.

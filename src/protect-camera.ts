@@ -512,7 +512,7 @@ export class ProtectCamera extends ProtectAccessory {
     }
 
     // Inform users about our which RTSP streams we found.
-    for(const entry of this.rtspEntries) {
+    for(const entry of rtspEntries) {
       this.log.info("%s: Found resolution: %s.", this.name(), this.getResolution(entry.resolution));
     }
 
