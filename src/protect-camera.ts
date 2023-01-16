@@ -509,6 +509,13 @@ export class ProtectCamera extends ProtectAccessory {
       rtspEntries.push({ channel: channel,
         name: this.getResolution([channel.width, channel.height, channel.fps]) + " (" + channel.name + ")",
         resolution: [ channel.width, channel.height, channel.fps ], url: cameraUrl + channel.rtspAlias + "?enableSrtp" });
+
+      // Inform users about our which RTSP streams we found.
+      if(nvr.optionEnabled(device, "Debug.Video.Startup", false)) {
+        for(const entry of this.rtspEntries) {
+          this.log.info("%s: Found resolution: %s.", this.name(), this.getResolution([ channel.width, channel.height, channel.fps ]));
+        }
+      }
     }
 
     // Sort the list of resolutions, from high to low.
